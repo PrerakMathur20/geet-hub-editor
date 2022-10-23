@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ToggleButton = () => {
+const ToggleButton = ({onChange}) => {
 	return (
 		<>
-			<label class='switch'>
-				<input type='checkbox' id='togBtn' />
-				<div class='toggle round'>
-					<span class='on'>Dual</span>
-					<span class='off'>Mono</span>
+			<label className='switch'>
+				<input type='checkbox' id='togBtn' onChange={(e) => onChange(e.target.checked)} defaultChecked={true} />
+				<div className='toggle round'>
+					<span className='on'>Dual</span>
+					<span className='off'>Mono</span>
 				</div>
 			</label>
 		</>
